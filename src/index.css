@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Touch-optimized precision range slider */
+input[type="range"].mri-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  touch-action: none;
+}
+
+input[type="range"].mri-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: #cbd5e1;
+}
+
+input[type="range"].mri-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  background: #1d4ed8;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.28);
+  margin-top: -8px;
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].mri-slider::-webkit-slider-thumb:active {
+  transform: scale(1.16);
+}
+
+input[type="range"].mri-slider::-moz-range-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: #cbd5e1;
+}
+
+input[type="range"].mri-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  background: #1d4ed8;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.28);
+}
+
+/* Custom subtle scrollbars for anatomy drawer */
+.mri-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.mri-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mri-scroll::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.3);
+  border-radius: 9999px;
+}
+
+.mri-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

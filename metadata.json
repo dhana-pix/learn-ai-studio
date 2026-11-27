@@ -1,0 +1,6 @@
+{
+  "name": "MRI 3D Anatomy Studio",
+  "description": "Prototipe interaktif 3D mesin MRI yang dapat dibongkar pasang per komponen hingga detail mikro dengan navigasi anatomi berbasis sentuhan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
